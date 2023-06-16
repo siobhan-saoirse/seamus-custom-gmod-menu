@@ -1,0 +1,54 @@
+
+	<div class="page" ng-controller="ControllerMain">
+
+		<div class="options">
+
+			<ul>
+
+				<li><img ng-src='../gamemodes/{{Gamemode}}/logo.png' /></li>
+				<li>&nbsp;</li>
+				<li ng-show="InGame"><a ng-click="BackToGame()" ng-Tranny="'Resume Game'"></a></li>
+				<li ng-show="InGame">&nbsp;</li>
+				<li><a ng-href="#/servers/" ng-Tranny="'Find Servers'"></a></li>
+				<li><a ng-href="#/newgame/" ng-Tranny="'Create Server'"></a></li>
+
+				<li>&nbsp;</li>
+				<li><a ng-href="#/addons/" ng-Tranny="'Addons'"></a></li>
+				<li><a ng-href="#/dupes/" ng-Tranny="'Dupes'"></a></li>
+				<li><a ng-href="#/saves/" ng-Tranny="'Saves'"></a></li>
+				<li><a ng-href="#/demos/" ng-Tranny="'Demos'"></a></li>
+				<li>&nbsp;</li>
+				<li><a ng-href="javascript:window.location.reload()" ng-Tranny="'Reload Menu'"></a></li>
+				<li><a ng-href="#/games/" ng-Tranny="'Games'"></a></li>
+				<li><a ng-click="PlayMoreMusic()" ng-Tranny="'Play More Music'"></a></li>
+
+				<li>&nbsp;</li>
+				<li><a ng-click="MenuOption( this, 'OpenOptionsDialog')" ng-Tranny="'Options'"></a></li>
+
+				<li>&nbsp;</li>
+				<li ng-show="InGame">
+					<a ng-click="Disconnect()" ng-Tranny="'Disconnect'"></a>
+				</li>
+				<li ng-show="InGame">
+					<a ng-click="PlayerList()" ng-Tranny="'Player List'"></a>
+				</li>
+				<li><a ng-click="MenuOption( this, 'Quit')" ng-Tranny="'Quit'"></a></li>
+
+			</ul>
+
+		</div>
+<!--
+		<div class="news" ng-hide="NewsList.length == 0">
+			<div class="news_item" style="{{NewsItemBackground( CurrentNewsItem.HeaderImage )}}" ng-hide="HideNews">
+				<div>
+					<span ng-click="OpenInSteam( CurrentNewsItem.Url )">{{CurrentNewsItem.Title}}</span>
+					<font>{{CurrentNewsItem.SummaryHtml}}</font>
+				</div>
+			</div>
+			<div class='news_buttons'>
+				<div ng-click="ToggleNewsList()" ng-hide="HideNews || AnyNewNewsItems"><img src="../materials/icon16/cross.png"></div>
+				<div class="{{IfElse( NewsItem.Url == CurrentNewsItem.Url, 'selected', '' )}} {{NewsItemClass( NewsItem )}}" ng-repeat="NewsItem in NewsList | orderBy: 'Date'" ng-click="SelectItem(NewsItem)"></div>
+			</div>
+		</div>
+-->
+	</div>
