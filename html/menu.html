@@ -62,6 +62,7 @@
 			<span ng-Tranny="'problems'"></span>
 			<number ng-show="ProblemCount > 0" class="{{IfElse( ProblemSeverity > 0, 'severity' + ProblemSeverity, '' )}}">{{ProblemCount}}</number>
 		</li>
+		<li class="smallicon hidelabel"><a href="javascript:lua.Run('gui.ShowConsole()')"><img src='img/server-dedicated.png'><span ng-Tranny="'Open Console'"></span></a></li>
 	</ul>
 
 	<ul class="center" ng-show="InGame">
@@ -71,9 +72,7 @@
 			<li class="bigicon hidelabel" ng-show="IsCurrentServerFav" ng-click="ToggleServerFavorites( false )"><a href="#/"><img src='img/favourite_server_del.png'><span ng-Tranny="'unfavorite_this_server'"></span></a></li>
 		</span>
 		<li class="bigicon" ng-click="BackToGame()"><a href="#/"><img src='img/back_to_game.png'><span ng-Tranny="'back_to_game'"></span></a></li>
-		<!--
 		<li ng-click="Disconnect()"><a href="#/"><img src='img/disconnect.png'><span ng-Tranny="'disconnect'"></span></a></li>
-		-->
 
 	</ul>
 
